@@ -1,6 +1,12 @@
 FROM alpine:3.10
 LABEL maintainer="Chris Kankiewicz <Chris@ChrisKankiewicz.com>"
 
+# Define Variable Mumble
+ARG adress_mumble_server=$adress_mumble_server
+ARG port_mumble_server=$port_mumble_server
+ENV adress_mumble_server=${adress_mumble_server}
+ENV port_mumble_server=${port_mumble_server}
+
 # Define Mumble version
 ARG MUMBLE_VERSION=1.3.0
 
@@ -27,7 +33,7 @@ RUN apk add --update ca-certificates bzip2 tar tzdata wget \
     && chown -R mumble:mumble /etc/mumble /opt/mumble
 
 # Expose ports
-EXPOSE 64738 64738/udp
+EXPOSE ${port_mumble_server} ${port_mumble_server}/udp
 
 # Set running user
 USER mumble
