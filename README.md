@@ -19,6 +19,14 @@ docker-mumble-NGINX-Let's Encrypt
   Docker image for Mumble server.
 </p>
 
+INSTRUCTION
+---------------------
+
+This version use the projet of EvertRamos : 
+
+Please install first evertramos/docker-compose-letsencrypt-nginx-proxy-companion
+https://github.com/evertramos/docker-compose-letsencrypt-nginx-proxy-companion
+
 1: Configure .env
 ---------------------
 Open .env and change :
