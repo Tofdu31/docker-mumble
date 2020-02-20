@@ -19,6 +19,17 @@ docker-mumble
   Docker image for Mumble server.
 </p>
 
+1: Configure .env
+---------------------
+In order to persist configuration data when upgrading your container you should create a named data
+volume. This is
+
+
+2: Change 
+---------------------
+
+
+
 Running the Container
 ---------------------
 
