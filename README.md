@@ -34,7 +34,9 @@ Configure files projet Mumble Server
 ---------------------
 Open .env and change :
 a) Change the port of mumble (by default : 64738)
+
 b) Password
+
 c) Address for your server
 
 
