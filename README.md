@@ -51,7 +51,11 @@ volume. This is not required but is _highly_ recommended.
 
 OPTIONNAL : Edit the Config
 ---------------
-Edit files/config.ini with your instruction !
+Edit :
+
+files/config.ini
+
+And add your instruction !
 
 Troubleshooting
 ---------------
