@@ -22,7 +22,7 @@ docker-mumble-NGINX-Let's Encrypt
 INSTRUCTION
 ---------------------
 
-This version use the projet of EvertRamos : 
+This version use the projet of EvertRamos : docker-compose-letsencrypt-nginx-proxy-companion
 
 Please install first evertramos/docker-compose-letsencrypt-nginx-proxy-companion
 https://github.com/evertramos/docker-compose-letsencrypt-nginx-proxy-companion
