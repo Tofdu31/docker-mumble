@@ -28,7 +28,11 @@ a) ADRESS_MUMBLE_SERVER= Change Address for your server Mumble
 
 b) PORT_MUMBLE_SERVER= Change the port of mumble (by default : 64738)
 
-c) SERVER_PASSWORD= Change Password of your superuser 
+c) SERVER_PASSWORD= Change Password of your superuser
+
+d) DOMAINS=mumble.your.domain.com
+
+e) LETSENCRYPT_EMAIL=your_email_to_register@lets_encrypt
 
 OPTIONNAL : Edit the Config
 ---------------
