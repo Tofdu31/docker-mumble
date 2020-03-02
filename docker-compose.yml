@@ -6,13 +6,13 @@ services:
        context: .
        dockerfile: ./Dockerfile
        args:
-        - adress_mumble_server=${ADRESS_MUMBLE_SERVER}
-        - port_mumble_server=${PORT_MUMBLE_SERVER}
+        - adress_mumble_server=${adress_mumble_server}
+        - port_mumble_server=${port_mumble_server}
     container_name: ${CONTAINER_MUMBLE_SERVER}
     restart: unless-stopped
     ports:
-      - "${PORT_MUMBLE_SERVER}:${PORT_MUMBLE_SERVER}"
-      - "${PORT_MUMBLE_SERVER}:${PORT_MUMBLE_SERVER}/udp"
+      - "${port_mumble_server}:${port_mumble_server}"
+      - "${port_mumble_server}:${port_mumble_server}/udp"
     environment:
       - TZ=UTC
       - VIRTUAL_HOST= ${DOMAINS}
