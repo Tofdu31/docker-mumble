@@ -58,7 +58,7 @@ volume. This is not required but is _highly_ recommended.
 
 And
 
-    docker-compose.yml
+    docker-compose up -d
 
 Troubleshooting
 ---------------
