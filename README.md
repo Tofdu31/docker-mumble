@@ -40,14 +40,6 @@ b) PORT_MUMBLE_SERVER= Change the port of mumble (by default : 64738)
 
 c) SERVER_PASSWORD= Change Password of your superuser 
 
-2 : Running the Container
----------------------
-
-In order to persist configuration data when upgrading your container you should create a named data
-volume. This is not required but is _highly_ recommended.
-
-    docker volume create --name mumble-data
-
 OPTIONNAL : Edit the Config
 ---------------
 Edit :
@@ -55,6 +47,14 @@ Edit :
 files/config.ini
 
 And add your instruction !
+
+2 : Running the Container
+---------------------
+
+In order to persist configuration data when upgrading your container you should create a named data
+volume. This is not required but is _highly_ recommended.
+
+    docker volume create --name mumble-data
 
 Troubleshooting
 ---------------
