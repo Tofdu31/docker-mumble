@@ -3,7 +3,7 @@ docker-mumble-NGINX-Let's Encrypt
 
 
 <p align="center">
-    <img src="docker-mumble.png" alt="Docker Mumble" width="500">
+    <img src="Docker_NGINX_PORTAINER_MUMBLE.png" alt="Docker Mumble NGINX LET'S ENCRYPT" width="500">
 
 <p align="center">
   Docker image for Mumble server.
