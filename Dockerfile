@@ -5,9 +5,11 @@ LABEL maintainer="Chris Kankiewicz <Chris@ChrisKankiewicz.com>"
 ARG adress_mumble_server=$adress_mumble_server
 ARG port_mumble_server=$port_mumble_server
 ARG password_mumble_server=$password_mumble_server
+ARG name_mumble_server=$name_mumble_server
 ENV adress_mumble_server=${adress_mumble_server}
 ENV port_mumble_server=${port_mumble_server}
 ENV password_mumble_server=${password_mumble_server}
+ENV name_mumble_server=${name_mumble_server}
 
 # Define Mumble version
 ARG MUMBLE_VERSION=1.3.0
@@ -22,6 +24,7 @@ RUN adduser -DHs /sbin/nologin mumble
 COPY files/config.ini /etc/mumble/config.ini
 RUN sed -i "s/CHANGE_PORT/${port_mumble_server}/g" /etc/mumble/config.ini
 RUN sed -i "s/CHANGE_PASSWORD/${password_mumble_server}/g" /etc/mumble/config.ini
+RUN sed -i "s/CHANGE_NAME/${name_mumble_server}/g" /etc/mumble/config.ini
 
 # Copy SuperUser password update script
 COPY files/supw /usr/local/bin/supw
