@@ -4,8 +4,10 @@ LABEL maintainer="Chris Kankiewicz <Chris@ChrisKankiewicz.com>"
 # Define Variable Mumble
 ARG adress_mumble_server=$adress_mumble_server
 ARG port_mumble_server=$port_mumble_server
+ARG password_mumble_server=$password_mumble_server
 ENV adress_mumble_server=${adress_mumble_server}
 ENV port_mumble_server=${port_mumble_server}
+ENV password_mumble_server=${password_mumble_server}
 
 # Define Mumble version
 ARG MUMBLE_VERSION=1.3.0
