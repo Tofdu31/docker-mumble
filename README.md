@@ -56,6 +56,10 @@ volume. This is not required but is _highly_ recommended.
 
     docker volume create --name mumble-data
 
+And
+
+    docker-compose.yml
+
 Troubleshooting
 ---------------
 
