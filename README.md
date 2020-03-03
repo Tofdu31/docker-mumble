@@ -28,11 +28,13 @@ a) adress_mumble_server= Change Address for your server Mumble
 
 b) port_mumble_server= Change the port of mumble (by default : 64738)
 
-c) SERVER_PASSWORD= Change Password of your superuser
+c) password_mumble_server= Change Password of your superuser
 
-d) DOMAINS=mumble.your.domain.com
+d) name_mumble_server=MUMBLE SERVER (parameter if you wish to give your "Root" channel a custom name.)
 
-e) LETSENCRYPT_EMAIL=your_email_to_register@lets_encrypt
+e) DOMAINS=mumble.your.domain.com
+
+f) LETSENCRYPT_EMAIL=your_email_to_register@lets_encrypt
 
 OPTIONNAL : Edit the Config
 ---------------
