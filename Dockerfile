@@ -12,7 +12,7 @@ ENV password_mumble_server=${password_mumble_server}
 ENV name_mumble_server=${name_mumble_server}
 
 # Define Mumble version
-ARG MUMBLE_VERSION=1.3.0
+ARG MUMBLE_VERSION=1.3.2
 
 # Create Mumble directories
 RUN mkdir -pv /opt/mumble /etc/mumble
