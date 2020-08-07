@@ -48,10 +48,11 @@ And add your instruction !
 
 Once you have a running container, you can edit the config with:
 
-docker exec -it mumble-server vi /etc/mumble/config.ini
+    docker exec -it mumble-server vi /etc/mumble/config.ini
+    
 After saving changes, restart your container:
 
-docker restart mumble-server
+    docker restart mumble-server
 
 2 : Running the Container
 ---------------------
