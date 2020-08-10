@@ -84,7 +84,7 @@ NOTE: This can be run at any time to update the SuperUser password
 
 --- OR ---
 
-Provide a SuperUser password using the SUPERUSER_PASSWORD environment variable (see the Optional docker run arguments section above).
+Provide a SuperUser password using the SUPERUSER_PASSWORD environment variable (see the Optional docker run arguments section above). https://github.com/PHLAK/docker-mumble#optional-docker-run-arguments
 
 Troubleshooting
 ---------------
