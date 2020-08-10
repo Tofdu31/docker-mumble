@@ -97,3 +97,8 @@ Copyright
 ---------
 
 This project is licensed under the [MIT License](https://github.com/PHLAK/docker-mumble/blob/master/LICENSE).
+
+---------
+ANDROID
+FOR ANDROID USE THE CLIENT : MUMLA
+https://f-droid.org/fr/packages/se.lublin.mumla/
