@@ -24,6 +24,9 @@ RUN adduser -DHs /sbin/nologin mumble
 COPY files/config.ini /etc/mumble/config.ini
 RUN sed -i "s/CHANGE_PORT/${port_mumble_server}/g;s/CHANGE_PASSWORD/${password_mumble_server}/g;s/CHANGE_NAME/${name_mumble_server}/g" /etc/mumble/config.ini
 
+# Copy run script
+COPY files/run.sh /opt/mumble/run.sh
+
 # Copy SuperUser password update script
 COPY files/supw /usr/local/bin/supw
 RUN chmod +x /usr/local/bin/supw
