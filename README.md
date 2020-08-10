@@ -66,6 +66,26 @@ And
 
     docker-compose up -d
 
+3 : Get/Set the SuperUser Password
+---------------------
+
+After starting your container, you can get the randomly generated SuperUser password with:
+
+    docker logs mumble-server 2>&1 | grep "Password for 'SuperUser'"
+
+
+--- OR ---
+
+Manually set a new SuperUser password with:
+
+    docker exec -it mumble-server supw
+
+NOTE: This can be run at any time to update the SuperUser password
+
+--- OR ---
+
+Provide a SuperUser password using the SUPERUSER_PASSWORD environment variable (see the Optional docker run arguments section above).
+
 Troubleshooting
 ---------------
 
