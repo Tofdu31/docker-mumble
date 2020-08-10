@@ -48,11 +48,11 @@ And add your instruction !
 
 Once you have a running container, you can edit the config with:
 
-    docker exec -it mumble-server vi /etc/mumble/config.ini
+    docker exec -it mumble_server-ssl vi /etc/mumble/config.ini
     
 After saving changes, restart your container:
 
-    docker restart mumble-server
+    docker restart mumble_server-ssl
 
 2 : Running the Container
 ---------------------
@@ -71,14 +71,14 @@ And
 
 After starting your container, you can get the randomly generated SuperUser password with:
 
-    docker logs mumble-server 2>&1 | grep "Password for 'SuperUser'"
+    docker logs mumble_server-ssl 2>&1 | grep "Password for 'SuperUser'"
 
 
 --- OR ---
 
 Manually set a new SuperUser password with:
 
-    docker exec -it mumble-server supw
+    docker exec -it mumble_server-ssl supw
 
 NOTE: This can be run at any time to update the SuperUser password
 
