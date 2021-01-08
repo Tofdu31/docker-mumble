@@ -10,6 +10,7 @@ services:
         - port_mumble_server=${port_mumble_server}
         - MUMBLE_serverpassword=${MUMBLE_serverpassword}
         - name_mumble_server=${name_mumble_server}
+        - MUMBLE_REGISTERNAME=${MUMBLE_REGISTERNAME}
     container_name: ${CONTAINER_MUMBLE_SERVER}
     restart: unless-stopped
     ports:
