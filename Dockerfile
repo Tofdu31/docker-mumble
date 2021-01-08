@@ -1,6 +1,10 @@
 FROM alpine:latest
 LABEL maintainer="Chris Kankiewicz <Chris@ChrisKankiewicz.com>"
 
+# Comment fonctionne les variables :
+# On met un ARG dans le docker-compose.yml
+# On place en ARG et ENV la variable dans le Dockerfile
+
 # Define ARG Variable Mumble
 ARG adress_mumble_server=$adress_mumble_server
 ARG port_mumble_server=$port_mumble_server
