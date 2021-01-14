@@ -4,38 +4,40 @@ LABEL maintainer="Chris Kankiewicz <Chris@ChrisKankiewicz.com>"
 # Comment fonctionne les variables :
 # On met un ARG dans le docker-compose.yml
 # On place en ARG et ENV la variable dans le Dockerfile
+# On place la variable dans le fichier de configuration
+# ici : files/config.ini
 
 # Define ARG Variable Mumble
 ARG adress_mumble_server=$adress_mumble_server
 ARG port_mumble_server=$port_mumble_server
-ARG MUMBLE_serverpassword=$MUMBLE_serverpassword
+ARG password_mumble_server=$password_mumble_server
 ARG name_mumble_server=$name_mumble_server
 ARG MUMBLE_REGISTERNAME=$MUMBLE_REGISTERNAME
+ARG MUMBLE_SERVERPASS=$MUMBLE_SERVERPASS
 
-# Define ENV Variable Mumble
+# Define Variable Mumble
 ENV adress_mumble_server=${adress_mumble_server}
 ENV port_mumble_server=${port_mumble_server}
-ENV MUMBLE_serverpassword=${MUMBLE_serverpassword}
+ENV password_mumble_server=${password_mumble_server}
 ENV name_mumble_server=${name_mumble_server}
+ENV MUMBLE_SERVERPASS=${MUMBLE_SERVERPASS}
 ENV MUMBLE_REGISTERNAME=${MUMBLE_REGISTERNAME}
 
 # Define Mumble version
-ARG MUMBLE_VERSION=1.3.3
-
-# Create Mumble directories
-RUN mkdir -pv /opt/mumble /etc/mumble
+ARG MUMBLE_VERSION=1.3.3                                                                                                                                                                                                                                                                                                                                                                                                              # Create Mumble directories                                                                                                                                                                                        RUN mkdir -pv /opt/mumble /etc/mumble
 
 # Create non-root user
 RUN adduser -DHs /sbin/nologin mumble
 
 # Copy and configure the config file
 COPY files/config.ini /etc/mumble/config.ini
-RUN sed -i "s/CHANGE_PORT/${port_mumble_server}/g;s/CHANGE_PASSWORD/${MUMBLE_serverpassword}/g;s/CHANGE_NAME/${name_mumble_server}/g" /etc/mumble/config.ini
+RUN sed -i "s/CHANGE_PORT/${port_mumble_server}/g;s/CHANGE_PASSWORD/${password_mumble_server}/g;s/CHANGE_NAME/${name_mumble_server}/g" /etc/mumble/config.ini
 RUN sed -i "s/MUMBLE_REGISTERNAME/${MUMBLE_REGISTERNAME}/g" /etc/mumble/config.ini
-
+RUN sed -i "s/MUMBLE_SERVERPASS/${MUMBLE_SERVERPASS}/g" /etc/mumble/config.ini
 
 # Copy run script
 COPY files/run.sh /opt/mumble/run.sh
+RUN chmod +x /opt/mumble/run.sh
 
 # Copy SuperUser password update script
 COPY files/supw /usr/local/bin/supw
