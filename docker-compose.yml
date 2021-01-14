@@ -8,19 +8,23 @@ services:
        args:
         - adress_mumble_server=${adress_mumble_server}
         - port_mumble_server=${port_mumble_server}
-        - MUMBLE_serverpassword=${MUMBLE_serverpassword}
+        - password_mumble_server=${password_mumble_server}
         - name_mumble_server=${name_mumble_server}
         - MUMBLE_REGISTERNAME=${MUMBLE_REGISTERNAME}
+        - MUMBLE_SERVERPASS=${MUMBLE_SERVERPASS}
+
     container_name: ${CONTAINER_MUMBLE_SERVER}
     restart: unless-stopped
     ports:
       - "${port_mumble_server}:${port_mumble_server}"
       - "${port_mumble_server}:${port_mumble_server}/udp"
+
     environment:
       - TZ=UTC
       - VIRTUAL_HOST= ${DOMAINS}
       - LETSENCRYPT_HOST= ${DOMAINS}
       - LETSENCRYPT_EMAIL= ${LETSENCRYPT_EMAIL}
+      - SUPERUSER_PASSWORD= ${SUPERUSER_PASSWORD}
 
 networks:
     default:
