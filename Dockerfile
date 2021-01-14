@@ -26,6 +26,9 @@ ENV MUMBLE_REGISTERNAME=${MUMBLE_REGISTERNAME}
 # Define Mumble version
 ARG MUMBLE_VERSION=1.3.3                                                                                                                                                                                                                                                                                                                                                                                                              # Create Mumble directories                                                                                                                                                                                        RUN mkdir -pv /opt/mumble /etc/mumble
 
+# Create Mumble directories
+RUN mkdir -pv /opt/mumble /etc/mumble
+
 # Create non-root user
 RUN adduser -DHs /sbin/nologin mumble
 
